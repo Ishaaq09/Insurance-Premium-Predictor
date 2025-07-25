@@ -2,12 +2,12 @@ import streamlit as st
 import pandas as pd
 import mlflow.pyfunc
 import numpy as np
+import joblib
 
 model_name = "Insurance Premium Calculator - XGBoost regressor model"
 model_version = "1"
 model_uri = f"models:/{model_name}/{model_version}"
-model = mlflow.pyfunc.load_model(model_uri)
-
+model = joblib.load("model.pkl")
 
 st.title("Insurance Premium Predictor")
 

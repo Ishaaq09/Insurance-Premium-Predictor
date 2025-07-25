@@ -14,7 +14,7 @@ st.title("Insurance Premium Predictor")
 st.write("Please enter customer details to predict their insurance premium:")
 
 with st.form("customer_form"):
-    id = st.number_input("Id", min_value=1200000, max_value=2000000)
+    # id = st.number_input("Id", min_value=1200000, max_value=2000000)
     
     age_missing = st.checkbox("Age is missing")
     if age_missing:
@@ -83,7 +83,7 @@ with st.form("customer_form"):
     
 if submit:
     input_data = pd.DataFrame({
-        "Id": [id],
+        # "Id": [id],
         "Age": [age],
         "Gender": [gender],
         "Annual Income": [income],
